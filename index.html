@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>lerri.travel</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="container">
+  <a class="card" href="https://www.instagram.com/lerritravel/">
+    <div class="text">
+      <h1>Instagram</h1>
+      <h2>@lerritravel</h2>
+    </div>
+    <div class="slides slides-center" data-side="left">
+      <div class="slide" style="background-image: url('images/instagram/3.jpg')"></div>
+      <div class="slide" style="background-image: url('images/instagram/2.jpg')"></div>
+      <div class="slide" style="background-image: url('images/instagram/1.jpg')"></div>
+    </div>
+  </a>
+  <a class="card" href="https://www.youtube.com/@lerritravel">
+    <div class="text">
+      <h1>Youtube</h1>
+      <h2>@lerritravel</h2>
+    </div>
+    <div class="slides slides-right" data-side="right">
+      <div class="slide" style="background-image: url('images/youtube/3.jpg')"></div>
+      <div class="slide" style="background-image: url('images/youtube/1.jpg')"></div>
+      <div class="slide" style="background-image: url('images/youtube/2.jpg')"></div>
+    </div>
+  </a>
+  <a class="card" href="https://www.tiktok.com/@lerritravel">
+    <div class="text">
+      <h1>TikTok</h1>
+      <h2>@lerritravel</h2>
+    </div>
+    <div class="slides slides-center" data-side="top">
+      <div class="slide" style="background-image: url('images/tiktok/3.jpg')"></div>
+      <div class="slide" style="background-image: url('images/tiktok/1.jpg')"></div>
+      <div class="slide" style="background-image: url('images/tiktok/2.jpg')"></div>
+    </div>
+  </a>
+</div>
+<script type="text/javascript">
+  function startSlideshow(slides, side) {
+    slides.forEach(slide => slide.style[side] = "0");
+    let i = slides.length - 1;
+    setInterval(function() {
+      if (i > 0) {
+        slides[i--].style[side] = "-170px";
+      } else {
+        i = slides.length - 1;
+        slides.forEach(slide => slide.style[side] = "0");
+      }
+    }, 5000);
+  }
+
+  window.onload = function() {
+    const slideshows = document.querySelectorAll('.slides');
+    for (let slideshow of slideshows) {
+      let slides = slideshow.querySelectorAll('.slide');
+      startSlideshow(slides, slideshow.dataset.side);
+    }
+  }
+</script>
+</body>
+</html>

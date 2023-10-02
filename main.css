@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+body {
+  background: linear-gradient(180deg, #B375D0 0%, #4277FF 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card {
+  clear: both;
+  display: block;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: white;
+  color: black;
+  text-decoration: none;
+}
+
+.card h1 {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.card h2 {
+  color: #777;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.text {
+  float: left;
+  margin-top: 50px;
+}
+
+.slides {
+  position: relative;
+  float: right;
+	width: 170px;
+  height: 170px;
+	overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 500ms ease;
+}
+
+.slides-center .slide {
+  background-position: center;
+}
+.slides-left .slide {
+  background-position: left;
+}
+.slides-right .slide {
+  background-position: right;
+}
+.slides-top .slide {
+  background-position: top;
+}
+.slides-bottom .slide {
+  background-position: bottom;
+}
